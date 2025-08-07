@@ -1,0 +1,383 @@
+let play = document.getElementById('play-button');
+let wordSelection = document.getElementById('word-selection');
+let nouns = document.getElementById('nouns');
+let nouns2 = document.getElementById('nouns2');
+let nouns3 = document.getElementById('nouns3');
+let adjs = document.getElementById('adjs');
+let adjs2 = document.getElementById('adjs2');
+let adjs3 = document.getElementById('adjs3');
+let verbs = document.getElementById('verbs');
+let verbs2 = document.getElementById('verbs2');
+let miscs = document.getElementById('misc');
+let miscs2 = document.getElementById('misc2');
+let title = document.getElementById('title');
+
+let adj1 = document.getElementById('adj-1');
+let noun1 = document.getElementById('noun-1');
+let verb1 = document.getElementById('verb-1');
+let verb2 = document.getElementById('verb-2');
+let adj2 = document.getElementById('adj-2');
+let misc1 = document.getElementById('misc-1');
+let misc2 = document.getElementById('misc-2');
+let adj3 = document.getElementById('adj-3');
+let noun2 = document.getElementById('noun-2');
+let noun3 = document.getElementById('noun-3');
+
+// Nouns Boolean
+nounBool = false;
+
+// Adjectives Boolean
+adjBool = false;
+
+// Verbs Boolean
+verbBool = false;
+
+// Misc Boolean
+miscBool = false;
+
+nouns.style.display = 'none';
+adjs.style.display = 'none';
+verbs.style.display = 'none';
+miscs.style.display = 'none';
+
+
+////////////////////////////////////////
+
+
+// Instructions (hide/show)
+$(document).ready(function(){
+    $(play).click(function(){
+      $("#instructions").slideToggle();
+      play.innerHTML = "How To Play";
+      play.style.marginTop = "15px";
+      document.getElementById('madlib').style.display = "inline";
+    });
+  });
+
+// Refresh Page
+document.getElementById('restart').addEventListener('click', function() {
+  location.reload();
+});
+
+
+  // Tooltips
+  $(".basketball").attr('title', 'Basketball');
+  $(".butterfly").attr('title', 'Butterfly');
+  $(".corn").attr('title', 'Corn');
+  $(".firetruck").attr('title', 'Firetruck');
+  $(".globe").attr('title', 'Earth');
+  $(".newspaper").attr('title', 'Newspaper');
+  $(".orange-slice").attr('title', 'Orange Slice');
+  $(".owl").attr('title', 'Owl');
+  $(".palm-tree").attr('title', 'Palm Tree');
+  $(".rhino").attr('title', 'Rhino');
+  $(".superhero").attr('title', 'Superhero');
+  $(".train").attr('title', 'Train');
+
+
+  $(".banana").attr('title', 'Banana');
+  $(".bread").attr('title', 'Bread');
+  $(".celery").attr('title', 'Celery');
+  $(".cookies").attr('title', 'Cookies');
+  $(".deer").attr('title', 'Deer');
+  $(".dice").attr('title', 'Dice');
+  $(".eagle").attr('title', 'Eagle');
+  $(".hat").attr('title', 'Hat');
+  $(".moon").attr('title', 'Moon');
+  $(".plant").attr('title', 'Plant');
+  $(".surfer").attr('title', 'Surfer');
+  $(".trumpet").attr('title', 'Trumpet');
+
+
+////////////////////////////////////////
+
+// ADJ 1
+adj1.addEventListener('click', function() {
+  adjBool = true;
+  if (adjBool == true) {
+    adjs.style.display = "inline";
+    adjs2.style.display = "none";
+    adjs3.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.adj-words').forEach(adjs_1 => {
+    adjs_1.addEventListener('click', function() {
+      adj1.innerHTML = adjs_1.innerHTML;
+      adj1.style.padding = '0px 25px';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// NOUN 1
+noun1.addEventListener('click', function() {
+  nounBool = true;
+  if (nounBool == true) {
+    nouns.style.display = "inline";
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    adjs.style.display = 'none';
+    adjs2.style.display = "none";
+    adjs3.style.display = "none";
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.noun-words').forEach(nouns_1 => {
+    nouns_1.addEventListener('click', function() {
+      noun1.innerHTML = nouns_1.innerHTML;
+      noun1.style.padding = '0px 0px';
+      noun1.className = 'no-underline';
+      // document.querySelectorAll('.noun-images').forEach(noun_images => {
+      //   mediaNouns = window.matchMedia( "(max-width: 909px)" );
+      //   if (mediaNouns.matches) {
+      //       // window width is at less than 909px
+      //       noun_images.style.width = '20%';
+      //       noun_images.style.marginTop = '-3px';
+      //   }
+      //   else {
+      //       // window width is greater than 909px
+      //         noun_images.style.width = '10%';
+      //   }
+      // });
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// VERB 1
+verb1.addEventListener('click', function() {
+  verbBool = true;
+  if (verbBool == true) {
+    verbs.style.display = "inline";
+    verbs2.style.display = 'none';
+    adjs.style.display = 'none';
+    adjs2.style.display = "none";
+    adjs3.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.verb-words').forEach(verbs_1 => {
+    verbs_1.addEventListener('click', function() {
+      verb1.innerHTML = verbs_1.innerHTML;
+      verb1.style.padding = '0px 25px';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// VERB 2
+verb2.addEventListener('click', function() {
+  verbBool = true;
+  if (verbBool == true) {
+    verbs2.style.display = "inline";
+    verbs.style.display = 'none';
+    adjs.style.display = 'none';
+    adjs2.style.display = "none";
+    adjs3.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.verb-words2').forEach(verbs_2 => {
+    verbs_2.addEventListener('click', function() {
+      verb2.innerHTML = verbs_2.innerHTML;
+      verb2.style.padding = '0px 25px';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// ADJ 2
+adj2.addEventListener('click', function() {
+  adjBool = true;
+  if (adjBool == true) {
+    adjs2.style.display = "inline";
+    adjs.style.display = "none";
+    adjs3.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.adj-words2').forEach(adjs_2 => {
+    adjs_2.addEventListener('click', function() {
+      adj2.innerHTML = adjs_2.innerHTML;
+      adj2.style.padding = '0px 25px';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// MISC 1
+misc1.addEventListener('click', function() {
+  miscBool = true;
+  if (miscBool == true) {
+    miscs.style.display = "inline";
+    miscs2.style.display = "none";
+    adjs3.style.display = "none";
+    adjs2.style.display = "none";
+    adjs.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.misc-words').forEach(misc_1 => {
+    misc_1.addEventListener('click', function() {
+      misc1.innerHTML = misc_1.innerHTML;
+      misc1.style.padding = '0px 0px';
+      misc1.className = 'no-underline';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// MISC 2
+misc2.addEventListener('click', function() {
+  miscBool = true;
+  if (miscBool == true) {
+    miscs2.style.display = "inline";
+    miscs.style.display = "none";
+    adjs3.style.display = "none";
+    adjs2.style.display = "none";
+    adjs.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.misc-words2').forEach(misc_2 => {
+    misc_2.addEventListener('click', function() {
+      misc2.innerHTML = misc_2.innerHTML;
+      misc2.style.padding = '0px 0px';
+      misc2.className = 'no-underline';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// ADJ 3
+adj3.addEventListener('click', function() {
+  adjBool = true;
+  if (adjBool == true) {
+    adjs3.style.display = "inline";
+    adjs2.style.display = "none";
+    adjs.style.display = "none";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    nouns3.style.display = 'none';
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.adj-words3').forEach(adjs_3 => {
+    adjs_3.addEventListener('click', function() {
+      adj3.innerHTML = adjs_3.innerHTML;
+      adj3.style.padding = '0px 25px';
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// NOUN 2
+noun2.addEventListener('click', function() {
+  nounBool = true;
+  if (nounBool == true) {
+    nouns2.style.display = "inline";
+    nouns.style.display = 'none';
+    nouns3.style.display = 'none';
+    adjs.style.display = 'none';
+    adjs2.style.display = "none";
+    adjs3.style.display = "none";
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.noun-words2').forEach(nouns_2 => {
+    nouns_2.addEventListener('click', function() {
+      noun2.innerHTML = nouns_2.innerHTML;
+      noun2.style.padding = '0px 0px';
+      noun2.className = 'no-underline';
+      // document.querySelectorAll('.noun-images2').forEach(noun_images2 => {
+      //   mediaNouns2 = window.matchMedia( "(max-width: 909px)" );
+      //   if (mediaNouns2.matches) {
+      //       // window width is at less than 909px
+      //       noun_images2.style.width = '20%';
+      //       noun_images2.style.marginTop = '-3px';
+      //   }
+      //   else {
+      //       // window width is greater than 909px
+      //       noun_images2.style.width = '10%';
+      //   }
+      // });
+      $('#closeModal').trigger("click");
+    });
+  });
+});
+
+// NOUN 3
+noun3.addEventListener('click', function() {
+  nounBool = true;
+  if (nounBool == true) {
+    nouns3.style.display = "inline";
+    nouns.style.display = 'none';
+    nouns2.style.display = 'none';
+    adjs.style.display = 'none';
+    adjs2.style.display = "none";
+    adjs3.style.display = "none";
+    verbs.style.display = 'none';
+    verbs2.style.display = 'none';
+    miscs.style.display = 'none';
+    miscs2.style.display = "none";
+    title.innerHTML = 'any word';
+  }
+  document.querySelectorAll('.noun-words3').forEach(nouns_3 => {
+    nouns_3.addEventListener('click', function() {
+      noun3.innerHTML = nouns_3.innerHTML;
+      noun3.style.padding = '0px 0px';
+      noun3.className = 'no-underline';
+      // document.querySelectorAll('.noun-images3').forEach(noun_images3 => {
+      //   mediaNouns3 = window.matchMedia( "(max-width: 909px)" );
+      //   if (mediaNouns3.matches) {
+      //       // window width is at less than 909px
+      //       noun_images3.style.width = '20%';
+      //       noun_images3.style.marginTop = '-3px';
+      //   }
+      //   else {
+      //       // window width is greater than 909px
+      //       noun_images3.style.width = '10%';
+      //   }
+      // });
+      $('#closeModal').trigger("click");
+    });
+  });
+});

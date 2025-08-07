@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Junior Madlibs - Little mermaid</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 		  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8645321-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-8645321-1');
+</script>
+
+  </head>
+  <body>
+
+    <img src="images/Little-mermaid-banner.jpg" class="img-fluid" style="width: 100%;">
+    
+
+
+    <div class="container print">
+        <div class="row">
+            <div class="col-sm-12">
+              <div id="instructions">
+                <h2 class="text-center">Instructions</h2>
+                    
+                <p>To play Little-mermaid , click on each icon & then pick a word from the wordbank that pops up! Whatever word you pick will fill into the spot where the icon is. Each icon is shown below. The nouns & miscellaneous will have pictures instead of words. Hover over each picture for a word match. Continue doing this throughout the story until you’ve filled in all the spaces. Finally, read your story!<br><br>
+                <i class="fas fa-star"></i> Noun<br>
+                <i class="fas fa-shoe-prints"></i> Verb<br>
+                <i class="far fa-smile"></i> Adjective<br>
+                <i class="fas fa-question"></i> Miscellaneous<br><br>
+                While you don’t necessarily need to know the parts of speech to play Mad Libs Junior, here is a quick lesson: A <i class="fas fa-star"></i> NOUN is the name of a person, place, or thing. Sidewalk, umbrella, bathtub, and roller skates are nouns. An <i class="far fa-smile"></i> ADJECTIVE describes a person, place, or thing. Lumpy, soft, cute, messy, and short are adjectives. A <i class="fas fa-shoe-prints"></i> VERB is an action word. Run, jump, and swim are verbs. Last but not least, <i class="fas fa-question"></i> MISCELLANEOUS, or MISC, is any random word.</p>
+              </div>
+
+                <div class="text-center print">
+                    
+
+                  
+                  <button id="play-button">Let's Play!</button>
+                  <button id="restart">Restart</button>
+                  <form action="../../index.html">
+                    <input type="submit" class="button" value="HOME">
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="madlib">
+      <div class="row" style="margin: 0px;">
+        <!-- <div class="col-sm"></div> -->
+        <div class="col-sm-12">
+          <h3 style="line-height: 1.4;" id="print-change">
+            Once upon a time, in the deep blue sea, there lived a little <span class="underline" id="adj-1" data-toggle="modal" data-target="#myModal"><i class="far fa-smile"></i></span>named Lily. She had sparkling green scales and long flowing hair. Lily was curious about
+<span class="underline" id="misc-1" data-toggle="modal" data-target="#myModal"><i class="fas fa-question"></i></span> world above the waves. One day, she swam too close and saw a handsome prince on a 
+<span class="underline" id="noun-1" data-toggle="modal" data-target="#myModal"><i class="fas fa-star"></i></span>. Suddenly, 
+<span class="underline" id="verb-1" data-toggle="modal" data-target="#myModal"><i class="fas fa-shoe-prints"></i></span> storm struck, and the prince fell into the 
+<span class="underline" id="noun-2" data-toggle="modal" data-target="#myModal"><i class="fas fa-star"></i></span>. Lily bravely saved him and fell in love. But as a mermaid, she couldn't be 
+<span class="underline" id="adj-2" data-toggle="modal" data-target="#myModal"><i class="far fa-smile"></i></span> him. A kind sea witch offered her legs 
+<span class="underline" id="noun-3" data-toggle="modal" data-target="#myModal"><i class="fas fa-star"></i></span> exchange for her voice. Lily agreed and became 
+<span class="underline" id="misc-2" data-toggle="modal" data-target="#myModal"><i class="fas fa-question"></i></span>. With her love and courage, she found her happily ever after, teaching 
+<span class="underline" id="adj-3" data-toggle="modal" data-target="#myModal"><i class="far fa-smile"></i></span> that true love knows no bounds
+          </h3>
+        </div>
+        <!-- <div class="col-sm"></div> -->
+      </div>
+      <div class="row" id="signature">
+        <div class="col-lg-12">
+            <p class="print">Write your name then print the game!</p>
+            <span class="text-center">Mad Libs created by: <input type="text"></span><br><br>
+            <button onclick="window.print();return false;" class="print">Print</button>
+            <audio id="backgroundMusic" loop>
+                     <source src="images/story5.mp3 " type="audio/mpeg"></audio>
+                     <script>
+  var audio = document.getElementById("backgroundMusic");
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  function adjustVolume(volume) {
+    audio.volume = volume;
+  }
+</script>
+                     
+<div>
+  <button onclick="toggleAudio()">Play/pause The story</button>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.1" onchange="adjustVolume(this.value)">
+</div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title">Choose <span id="title"></span>!</h4>
+            </div>
+            <div class="modal-body">
+              <div class="text-center">
+                <h5 id="nouns">
+                  <span class="noun-words">us</span>
+                  <span class="noun-words">ship</span>
+                  <span class="noun-words">water</span>
+                  <br>
+                  <span class="noun-words">the </span>
+                  <span class="noun-words">with</span>
+                  <span class="noun-words">a</span>
+                  <br>
+                  <span class="noun-words">in</span>
+                  <span class="noun-words">human</span>
+                  <span class="noun-words">mermaid</span>
+                  <br>
+
+                </h5>
+                <h5 id="nouns2">
+                  <span class="noun-words2">us</span>
+                  <span class="noun-words2">ship</span>
+                  <span class="noun-words2">water</span>
+                  <br>
+                  <span class="noun-words2">the </span>
+                  <span class="noun-words2">with</span>
+                  <span class="noun-words2">a</span>
+                  <br>
+                  <span class="noun-words2">in</span>
+                  <span class="noun-words2">human</span>
+                  <span class="noun-words2">mermaid</span>
+                </h5>
+                <h5 id="nouns3">
+                  <span class="noun-words3">us</span>
+                  <span class="noun-words3">ship</span>
+                  <span class="noun-words3">water</span>
+                  <br>
+                  <span class="noun-words3">the </span>
+                  <span class="noun-words3">with</span>
+                  <span class="noun-words3">a</span>
+                  <br>
+                  <span class="noun-words3">in</span>
+                  <span class="noun-words3">human</span>
+                  <span class="noun-words3">mermaid</span>
+                </h5>
+                <h5 id="nouns4">
+                  <span class="noun-words4">us</span>
+                  <span class="noun-words4">ship</span>
+                  <span class="noun-words4">water</span>
+                  <br>
+                  <span class="noun-words4">the </span>
+                  <span class="noun-words4">with</span>
+                  <span class="noun-words4">a</span>
+                  <br>
+                  <span class="noun-words4">in</span>
+                  <span class="noun-words4">human</span>
+                  <span class="noun-words4">mermaid</span>
+                </h5>
+                <h5 id="nouns5">
+                  <span class="noun-words5">us</span>
+                  <span class="noun-words5">ship</span>
+                  <span class="noun-words5">water</span>
+                  <br>
+                  <span class="noun-words5">the </span>
+                  <span class="noun-words5">with</span>
+                  <span class="noun-words5">a</span>
+                  <br>
+                  <span class="noun-words5">in</span>
+                  <span class="noun-words5">human</span>
+                  <span class="noun-words5">mermaid</span>
+                </h5>
+              </div>
+              <div class="text-center">
+                <h5 id="adjs">
+                  <span class="adj-words">us</span>
+                  <span class="adj-words">ship</span>
+                  <span class="adj-words">water</span>
+                  <br>
+                  <span class="adj-words">the </span>
+                  <span class="adj-words">with</span>
+                  <span class="adj-words">a</span>
+                  <br>
+                  <span class="adj-words">in</span>
+                  <span class="adj-words">human</span>
+                  <span class="adj-words">mermaid</span>
+                </h5>
+                <h5 id="adjs2">
+                  <span class="adj-words2">us</span>
+                  <span class="adj-words2">ship</span>
+                  <span class="adj-words2">water</span>
+                  <br>
+                  <span class="adj-words2">the </span>
+                  <span class="adj-words2">with</span>
+                  <span class="adj-words2">a</span>
+                  <br>
+                  <span class="adj-words2">in</span>
+                  <span class="adj-words2">human</span>
+                  <span class="adj-words2">mermaid</span>
+                </h5>
+                <h5 id="adjs3">
+                  <span class="adj-words3">us</span>
+                  <span class="adj-words3">ship</span>
+                  <span class="adj-words3">water</span>
+                  <br>
+                  <span class="adj-words3">the </span>
+                  <span class="adj-words3">with</span>
+                  <span class="adj-words3">a</span>
+                  <br>
+                  <span class="adj-words3">in</span>
+                  <span class="adj-words3">human</span>
+                  <span class="adj-words3">mermaid</span>
+                </h5>
+                <h5 id="adjs4">
+                  <<span class="adj-words4">us</span>
+                  <span class="adj-words4">ship</span>
+                  <span class="adj-words4">water</span>
+                  <br>
+                  <span class="adj-words4">the </span>
+                  <span class="adj-words4">with</span>
+                  <span class="adj-words4">a</span>
+                  <br>
+                  <span class="adj-words4">in</span>
+                  <span class="adj-words4">human</span>
+                  <span class="adj-words4">mermaid</span>
+                </h5>
+                <h5 id="adjs5">
+                  <span class="adj-words5">us</span>
+                  <span class="adj-words5">ship</span>
+                  <span class="adj-words5">water</span>
+                  <br>
+                  <span class="adj-words5">the </span>
+                  <span class="adj-words5">with</span>
+                  <span class="adj-words5">a</span>
+                  <br>
+                  <span class="adj-words5">in</span>
+                  <span class="adj-words5">human</span>
+                  <span class="adj-words5">mermaid</span>
+                </h5>
+                <h5 id="adjs6">
+                  <span class="adj-words6">us</span>
+                  <span class="adj-words6">ship</span>
+                  <span class="adj-words6">water</span>
+                  <br>
+                  <span class="adj-words6">the </span>
+                  <span class="adj-words6">with</span>
+                  <span class="adj-words6">a</span>
+                  <br>
+                  <span class="adj-words6">in</span>
+                  <span class="adj-words6">human</span>
+                  <span class="adj-words6">mermaid</span>
+                </h5>
+              </div>
+              <div class="text-center">
+                <h5 id="verbs">
+                  <span class="verb-words">us</span>
+                  <span class="verb-words">ship</span>
+                  <span class="verb-words">water</span>
+                  <br>
+                  <span class="verb-words">the </span>
+                  <span class="verb-words">with</span>
+                  <span class="verb-words">a</span>
+                  <br>
+                  <span class="verb-words">in</span>
+                  <span class="verb-words">human</span>
+                  <span class="verb-words">mermaid</span>
+                </h5>
+                <h5 id="verbs2">
+                  <span class="verb-words2">us</span>
+                  <span class="verb-words2">ship</span>
+                  <span class="verb-words2">water</span>
+                  <br>
+                  <span class="verb-words2">the </span>
+                  <span class="verb-words2">with</span>
+                  <span class="verb-words2">a</span>
+                  <br>
+                  <span class="verb-words2">in</span>
+                  <span class="verb-words2">human</span>
+                  <span class="verb-words2">mermaid</span>
+                  <span class="verb-words2">sang</span>
+                </h5>
+              </div>
+              <div class="text-center">
+                <h5 id="misc">
+                  <span class="misc-words">us</span>
+                  <span class="misc-words">ship</span>
+                  <span class="misc-words">water</span>
+                  <br>
+                  <span class="misc-words">the </span>
+                  <span class="misc-words">with</span>
+                  <span class="misc-words">a</span>
+                  <br>
+                  <span class="misc-words">in</span>
+                  <span class="misc-words">human</span>
+                  <span class="misc-words">mermaid</span>
+                  
+                </h5>
+                <h5 id="misc2">
+                  <span class="misc-words2">us</span>
+                  <span class="misc-words2">ship</span>
+                  <span class="misc-words2">water</span>
+                  <br>
+                  <span class="misc-words2">the </span>
+                  <span class="misc-words2">with</span>
+                  <span class="misc-words2">a</span>
+                  <br>
+                  <span class="misc-words2">in</span>
+                  <span class="misc-words2">human</span>
+                  <span class="misc-words2">mermaid</span>
+                  
+                </h5>
+                <h5 id="misc3">
+                  <span class="misc-words3">us</span>
+                  <span class="misc-words3">ship</span>
+                  <span class="misc-words3">water</span>
+                  <br>
+                  <span class="misc-words3">the </span>
+                  <span class="misc-words3">with</span>
+                  <span class="misc-words3">a</span>
+                  <br>
+                  <span class="misc-words3">in</span>
+                  <span class="misc-words3">human</span>
+                  <span class="misc-words3">mermaid</span>
+                </h5>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <noscript>
+      <div class="text-center" style="background: black; color: white; padding: 40px; margin: -40% 20% 0% 20%; font-size: 25px;">
+        <p>Your browser does not not support JavaScript! Please turn it on & refresh this page.</p>
+      </div>
+    </noscript>
+  </body>
+</html>

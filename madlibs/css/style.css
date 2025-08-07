@@ -1,0 +1,110 @@
+body {
+  background-image: url("../images/Madlib_pattern.jpg");
+  background-size: contain;
+  font-family: 'Chelsea Market', cursive, sans-serif;
+  background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  /* font-family: 'Chelsea Market'; */
+}
+
+.responsive {
+  width: 100%;
+  height: 190px;
+  vertical-align: middle;
+}
+
+.blue {
+  background-color: #1fa1e5;
+  max-width: 100%;
+}
+
+.input2 {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  width: 12%;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  word-spacing: 10px;
+}
+
+.underline{
+  border-bottom: 2px solid black;
+  padding: 0px 40px;
+}
+
+.wordsred {
+  color: #cc0000;
+}
+
+.wordspurple {
+  color: #aa00ff;
+}
+
+.wordsblue {
+  color: #1a75ff;
+}
+
+.wordsgreen {
+  color: #33cc33;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+  /* Famous Cats Stylesheet */
+
+  .table{
+text-align: left;
+  }
+
+
+  @media print {
+    .print {
+        display: none;
+    }
+
+
+    .input2 {
+        width: 30%;
+        border: none;
+        font-weight: bold;
+    }
+
+  }

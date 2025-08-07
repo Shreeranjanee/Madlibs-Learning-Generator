@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs - Jack and the Beanstalk</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style>
+    .button {
+      background: #1fa1e5;
+      border-radius: 5px;
+      color: black;
+      padding: 3px 10px;
+      outline: none;
+      border: 1px solid white;
+      font-size: 25px;
+    }
+
+    .button:hover {
+      background: #398ab2;
+      border-radius: 5px;
+      color: white;
+      padding: 3px 10px;
+      outline: none;
+      border: 1px solid white;
+      font-size: 25px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8645321-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8645321-1');
+
+  </script>
+
+</head>
+
+<body>
+  <img src="images/jack&bean.jpg" class="img-fluid" style="width: 100%;">
+
+  <div class="container-fluid" style="padding-top: 20px">
+    <h3 style="text-align:center">
+      To play, fill in the blanks on this page with the requested words. When you’re done, click “Create Mad Libs” to view your story. Read the story aloud and laugh! In case you haven’t learned the parts of speech yet, here is a quick lesson:
+    </h3><br>
+    <ul>
+      <h3>
+        <li>A <span class="wordsred">NOUN</span> is the name of a person, place, or thing. Sidewalk, umbrella, bathtub, and roller skates are nouns.</li>
+      </h3>
+      <h3>
+        <li>An <span class="wordspurple">ADJECTIVE</span> describes a person, place, or thing. Lumpy, soft, cute, messy, and short are adjectives.</li>
+      </h3>
+      <h3>
+        <li>A <span class="wordsblue">VERB</span> is an action word. Run, jump, and swim are verbs.</li>
+      </h3>
+      <h3>
+        <li>An <span class="wordsgreen">ADVERB</span> describes in what way someone does something. Quickly, slowly, and carefully are adverbs.</li>
+      </h3>
+    </ul>
+  </div>
+  <div class="container" style="text-align:center">
+    <h3>
+      <form id="madLibsForm" onsubmit="event.preventDefault(); generateMadLibs();">
+        <tr>
+          <td><input type="text" name="noun" placeholder="noun" autocomplete="off" required></td>
+          <td><input type="text" name="noun2" placeholder="noun" autocomplete="off" required></td>
+          <td><input type="text" name="person" placeholder="person in room" autocomplete="off" required></td>
+          <td><input type="text" name="pluralnoun" placeholder="plural noun" autocomplete="off" required></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="adjective" placeholder="adjective" autocomplete="off" required></td>
+          <td><input type="text" name="noun3" placeholder="noun" autocomplete="off" required></td>
+          <td><input type="text" name="body" placeholder="part of the body (plural)" autocomplete="off" required></td>
+          <td><input type="text" name="adjective2" placeholder="adjective" autocomplete="off" required></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="adjective3" placeholder="adjective" autocomplete="off" required></td>
+          <td><input type="text" name="silly" placeholder="silly word" autocomplete="off" required></td>
+          <td><input type="text" name="pluralnoun2" placeholder="plural noun" autocomplete="off" required></td>
+          <td><input type="text" name="number" placeholder="number" autocomplete="off" required></td>
+        </tr><br>
+        <input type="submit" class="button" value="Create Mad Libs!" style="margin-top:15px">
+      </form>
+     
+     <form action="../../index.html">
+                    <input type="submit" class="button" value="HOME" style="margin-top:15px">
+                </form>
+    </h3>
+  </div>
+
+  
+  <div class="container hidden" id="madLibsResult">
+    <h2>
+      Once upon a time there was a/an <span id="nounBlank" class="underline"></span> named Jack who lived with his mother in a tiny <span id="noun2Blank" class="underline"></span>. The only thing they owned was a cow named <span id="personBlank" class="underline"></span>. Jack's mom told him to sell the cow to buy some <span id="pluralnounBlank" class="underline"></span>. On his way to the market, Jack met a stranger who said, "I'll trade you these <span id="adjectiveBlank" class="underline"></span> beans for your cow." Jack agreed, but when his mom learned he had disobeyed her, she was angrier than a wild <span id="noun3Blank" class="underline"></span> and threw the beans out the window. As they slept, the beans grew into a gigantic beanstalk. When Jack awoke, he couldn't believe his <span id="bodyBlank" class="underline"></span>. He immediately climbed the <span id="adjective2Blank" class="underline"></span> beanstalk. At the top, he met a/an <span id="adjective3Blank" class="underline"></span> giant. "Fee, fi, fo, <span id="sillyBlank" class="underline"></span>!" the angry giant bellowed. Jack quickly escaped, grabbing a hen that laid golden <span id="pluralnoun2Blank" class="underline"></span>, and quickly climbed down the beanstalk. With their newfound wealth, Jack and his mother bought <span id="numberBlank" class="underline"></span> cows and lived happily ever after.
+    </h2>
+  </div>
+  <script>
+    function generateMadLibs() {
+      const form = document.getElementById("madLibsForm");
+      const resultDiv = document.getElementById("madLibsResult");
+      resultDiv.classList.remove("hidden");
+  
+      const noun = document.getElementsByName("noun")[0].value;
+      const noun2 = document.getElementsByName("noun2")[0].value;
+      const person = document.getElementsByName("person")[0].value;
+      const pluralnoun = document.getElementsByName("pluralnoun")[0].value;
+      const adjective = document.getElementsByName("adjective")[0].value;
+      const noun3 = document.getElementsByName("noun3")[0].value;
+      const body = document.getElementsByName("body")[0].value;
+      const adjective2 = document.getElementsByName("adjective2")[0].value;
+      const adjective3 = document.getElementsByName("adjective3")[0].value;
+      const silly = document.getElementsByName("silly")[0].value;
+      const pluralnoun2 = document.getElementsByName("pluralnoun2")[0].value;
+      const number = document.getElementsByName("number")[0].value;
+  
+      document.getElementById("nounBlank").textContent = noun;
+      document.getElementById("noun2Blank").textContent = noun2;
+      document.getElementById("personBlank").textContent = person;
+      document.getElementById("pluralnounBlank").textContent = pluralnoun;
+      document.getElementById("adjectiveBlank").textContent = adjective;
+      document.getElementById("noun3Blank").textContent = noun3;
+      document.getElementById("bodyBlank").textContent = body;
+      document.getElementById("adjective2Blank").textContent = adjective2;
+      document.getElementById("adjective3Blank").textContent = adjective3;
+      document.getElementById("sillyBlank").textContent = silly;
+      document.getElementById("pluralnoun2Blank").textContent = pluralnoun2;
+      document.getElementById("numberBlank").textContent = number;
+  
+      form.style.display = "none";
+  
+      const img = document.querySelector("img");
+      img.style.display = "block";
+  
+      const style = document.querySelector("link[href='css/style.css']");
+      style.style.display = "none";
+  
+      const ul = document.querySelector("ul");
+      ul.style.display = "none";
+    }
+  </script>
+  
+  <script>
+    function generateMadLibs() {
+        const form = document.getElementById("madLibsForm");
+        const resultDiv = document.getElementById("madLibsResult");
+        resultDiv.classList.remove("hidden");
+      
+        const noun = document.getElementsByName("noun")[0].value;
+        const noun2 = document.getElementsByName("noun2")[0].value;
+        const person = document.getElementsByName("person")[0].value;
+        const pluralnoun = document.getElementsByName("pluralnoun")[0].value;
+        const adjective = document.getElementsByName("adjective")[0].value;
+        const noun3 = document.getElementsByName("noun3")[0].value;
+        const body = document.getElementsByName("body")[0].value;
+        const adjective2 = document.getElementsByName("adjective2")[0].value;
+        const adjective3 = document.getElementsByName("adjective3")[0].value;
+        const silly = document.getElementsByName("silly")[0].value;
+        const pluralnoun2 = document.getElementsByName("pluralnoun2")[0].value;
+        const number = document.getElementsByName("number")[0].value;
+      
+        document.getElementById("nounBlank").textContent = noun;
+        document.getElementById("noun2Blank").textContent = noun2;
+        document.getElementById("personBlank").textContent = person;
+        document.getElementById("pluralnounBlank").textContent = pluralnoun;
+        document.getElementById("adjectiveBlank").textContent = adjective;
+        document.getElementById("noun3Blank").textContent = noun3;
+        document.getElementById("bodyBlank").textContent = body;
+        document.getElementById("adjective2Blank").textContent = adjective2;
+        document.getElementById("adjective3Blank").textContent = adjective3;
+        document.getElementById("sillyBlank").textContent = silly;
+        document.getElementById("pluralnoun2Blank").textContent = pluralnoun2;
+        document.getElementById("numberBlank").textContent = number;
+      
+        form.reset();
+      
+        const elementsToHide = document.querySelectorAll(
+          "body > *:not(img):not(#madLibsResult)"
+        );
+        elementsToHide.forEach((element) => {
+          element.style.display = "none";
+        });
+      }
+      
+  </script>
+  
+  
+</body>
+
+</html>

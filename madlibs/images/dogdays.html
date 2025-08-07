@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs - Dog Days</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style>
+    .button {
+      background: #f9e01d;
+      border-radius: 5px;
+      color: black;
+      padding: 3px 10px;
+      outline: none;
+      border: 1px solid white;
+      font-size: 25px;
+    }
+
+    .button:hover {
+      background: #a49a4e;
+      border-radius: 5px;
+      color: white;
+      padding: 3px 10px;
+      outline: none;
+      border: 1px solid white;
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="dogdays.jpg" class="img-fluid" style="width: 100%;">
+
+  <div class="container-fluid" style="padding-top: 20px">
+    <div class="container-fluid" id="madLibsOutput">
+      <h3>Mad Libs Story:</h3>
+      <p id="storyOutput"></p>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="text-align: center">
+    <form action="/">
+      <input type="submit" class="button" value="Back to Home Screen!" style="margin-top: 15px">
+    </form>
+  </div>
+
+  <script>
+    // Retrieve the Mad Libs story from the URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const story = urlParams.get('story');
+
+    // Display the story on the page
+    document.getElementById('storyOutput').textContent = story;
+  </script>
+</body>
+
+</html>

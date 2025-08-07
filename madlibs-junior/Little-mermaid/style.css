@@ -1,0 +1,542 @@
+body {
+    background-image: url('images/background.jpg');
+    font-family: 'Chelsea Market', cursive;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    background: #cd7c2a;
+    border-radius: 5px;
+    color: black;
+    padding: 3px 10px;
+    outline: none;
+    border: 1px solid white;
+}
+
+button:hover {
+    background: #8a643e;
+    border-radius: 5px;
+    color: white;
+    padding: 3px 10px;
+    outline: none;
+    border: 1px solid white;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    width: 12%;
+}
+
+#instructions {
+    font-size: 22px;
+    margin-top: 3%;
+}
+
+#instructions-button {
+    display: none;
+}
+
+#play-button {
+    margin-bottom: 15px;
+}
+
+#madlib {
+    margin-top: 50px;
+    display: none;
+    text-align: center;
+}
+
+#word-selection {
+    border: 2px solid black;
+}
+
+.underline {
+    border-bottom: 2px solid black;
+    padding: 0px 46px;
+    cursor: pointer;
+}
+
+.no-underline {
+    padding: 0px 46px;
+    cursor: pointer;
+}
+
+.selectWord {
+    cursor: pointer;
+}
+
+#signature {
+    margin-top: 50px;
+}
+
+.adj-words {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words2 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words3 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words4 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words5 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words6 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+/* .noun-words {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.noun-words2 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.noun-words3 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.noun-words4 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.noun-words5 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+} */
+
+.verb-words {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.verb-words2 {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+/* .misc-words {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.misc-words2 {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.misc-words3 {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+} */
+
+@media only screen and  (max-width: 4000px) and (min-width: 910px) { 
+   /* .noun-images {
+        width: 20%;
+    } */
+
+    .noun-words img {
+        width: 16%;
+    }
+
+    #noun-1 img {
+        width: 8%;
+    }
+
+    /* .noun-images2 {
+        width: 20%;
+    } */
+
+    .noun-words2 img {
+        width: 16%;
+    }
+
+    #noun-2 img {
+        width: 8%;
+    }
+
+    /* .noun-images3 {
+        width: 20%;
+    } */
+
+    .noun-words3 img {
+        width: 16%;
+    }
+
+    #noun-3 img {
+        width: 8%;
+    }
+
+    /* .noun-images4 {
+        width: 20%;
+    } */
+
+    .noun-words4 img {
+        width: 16%;
+    }
+
+    #noun-4 img {
+        width: 8%;
+    }
+
+    /* .noun-images5 {
+        width: 20%;
+    } */
+
+    .noun-words5 img {
+        width: 16%;
+    }
+
+    #noun-5 img {
+        width: 8%;
+    }
+
+    .noun-words {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .noun-words2 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .noun-words3 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .noun-words4 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .noun-words5 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .misc-words img {
+        width: 16%;
+    }
+
+    #misc-1 img {
+        width: 8%;
+    }
+
+    .misc-words2 img {
+        width: 16%;
+    }
+
+    #misc-2 img {
+        width: 8%;
+    }
+
+    .misc-words3 img {
+        width: 16%;
+    }
+
+    #misc-3 img {
+        width: 8%;
+    }
+
+    .misc-words {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .misc-words2 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .misc-words3 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+}
+
+@media only screen and  (max-width: 909px) and (min-width: 100px) { 
+    .noun-words img {
+        width: 20%;
+    }
+
+    #noun-1 img {
+        width: 20%;
+    }
+
+    .noun-words2 img {
+        width: 20%;
+    }
+
+    #noun-2 img {
+        width: 20%;
+    }
+
+    .noun-words3 img {
+        width: 20%;
+    }
+
+    #noun-3 img {
+        width: 20%;
+    }
+
+    .noun-words4 img {
+        width: 20%;
+    }
+
+    #noun-4 img {
+        width: 20%;
+    }
+
+    .noun-words5 img {
+        width: 20%;
+    }
+
+    #noun-5 img {
+        width: 20%;
+    }
+
+    .noun-words {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .noun-words2 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .noun-words3 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .noun-words4 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .noun-words5 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .misc-words img {
+        width: 20%;
+    }
+
+    #misc-1 img {
+        width: 20%;
+    }
+
+    .misc-words2 img {
+        width: 20%;
+    }
+
+    #misc-2 img {
+        width: 20%;
+    }
+
+    .misc-words3 img {
+        width: 20%;
+    }
+
+    #misc-3 img {
+        width: 20%;
+    }
+
+    .misc-words {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .misc-words2 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .misc-words3 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+}
+
+@media print {
+
+    .noun-words img {
+        width: 16%;
+    }
+
+    #noun-1 img {
+        width: 8%;
+    }
+
+    .noun-words2 img {
+        width: 16%;
+    }
+
+    #noun-2 img {
+        width: 8%;
+    }
+
+    .noun-words3 img {
+        width: 16%;
+    }
+
+    #noun-3 img {
+        width: 8%;
+    }
+
+    .noun-words4 img {
+        width: 16%;
+    }
+
+    #noun-4 img {
+        width: 8%;
+    }
+
+    .noun-words5 img {
+        width: 16%;
+    }
+
+    #noun-5 img {
+        width: 8%;
+    }
+
+    .misc-words img {
+        width: 16%;
+    }
+
+    #misc-1 img {
+        width: 8%;
+    }
+
+    .misc-words2 img {
+        width: 16%;
+    }
+
+    #misc-2 img {
+        width: 8%;
+    }
+
+    .misc-words3 img {
+        width: 16%;
+    }
+
+    #misc-3 img {
+        width: 8%;
+    }
+
+    .print {
+        display: none;
+    }
+
+    #signature {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    input {
+        width: 40%;
+        border: none;
+        font-weight: bold;
+    }
+
+    #print-change {
+        margin-top: 5%;
+        margin-left: 11%;
+    }
+
+    #madlib {
+        text-align: left;
+    }
+}

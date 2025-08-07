@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Libs - Talk like a Pirate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .button {
+            background: #b8d787;
+            border-radius: 5px;
+            color: black;
+            padding: 3px 10px;
+            outline: none;
+            border: 1px solid white;
+            font-size: 25px;
+        }
+
+        .button:hover {
+            background: #95af6b;
+            border-radius: 5px;
+            color: white;
+            padding: 3px 10px;
+            outline: none;
+            border: 1px solid white;
+            font-size: 25px;
+        }
+        .hidden-elements > *:not(img):not(#madLibsStory) {
+            display: none;
+          }
+    </style>
+</head>
+
+<body>
+    <img src="images/talkpirate.jpg" class="img-fluid" style="width: 100%;">
+
+    <div class="container-fluid" style="padding-top: 20px">
+        <h3 style="text-align:center">
+            To play, fill in the blanks on this page with the requested words. When you’re done, click “Create Mad Libs”
+            to view your story. Read the story aloud and laugh! In case you haven’t learned the parts of speech yet,
+            here is a quick lesson:
+        </h3><br>
+        <ul>
+            <h3>
+                <li>A <span class="wordsred">NOUN</span> is the name of a person, place, or thing. Sidewalk, umbrella,
+                    bathtub, and roller skates are nouns.</li>
+            </h3>
+            <h3>
+                <li>An <span class="wordspurple">ADJECTIVE</span> describes a person, place, or thing. Lumpy, soft,
+                    cute, messy, and short are adjectives.</li>
+            </h3>
+            <h3>
+                <li>A <span class="wordsblue">VERB</span> is an action word. Run, jump, and swim are verbs.</li>
+            </h3>
+            <h3>
+                <li>An <span class="wordsgreen">ADVERB</span> describes in what way someone does something. Quickly,
+                    slowly, and carefully are adverbs.</li>
+            </h3>
+        </ul>
+    </div>
+
+    <div class="container-fluid" style="text-align:center">
+        <h3>
+            <form id="madLibsForm">
+                <table>
+                    <tr>
+                        <td><input type="text" name="noun" placeholder="noun" autocomplete="off" required></td>
+                        <td><input type="text" name="adjective" placeholder="adjective" autocomplete="off" required></td>
+                        <td><input type="text" name="verb" placeholder="verb" autocomplete="off" required></td>
+                        <td><input type="text" name="adverb" placeholder="adverb" autocomplete="off" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="noun2" placeholder="noun" autocomplete="off" required></td>
+                        <td><input type="text" name="adjective2" placeholder="adjective" autocomplete="off" required></td>
+                        <td><input type="text" name="pluralnoun" placeholder="plural noun" autocomplete="off"
+                                required></td>
+                        <td><input type="text" name="pluralnoun2" placeholder="plural noun" autocomplete="off"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="pluralnoun3" placeholder="plural noun" autocomplete="off"
+                                required></td>
+                        <td><input type="text" name="body" placeholder="part of the body" autocomplete="off"
+                                required></td>
+                        <td><input type="text" name="noun3" placeholder="noun" autocomplete="off" required></td>
+                        <td><input type="text" name="noun4" placeholder="noun" autocomplete="off" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="noun5" placeholder="noun" autocomplete="off" required></td>
+                        <td><input type="text" name="noun6" placeholder="noun" autocomplete="off" required></td>
+                        <td><input type="text" name="body2" placeholder="part of the body" autocomplete="off"
+                                required></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" class="button" value="Create Mad Libs!" style="margin-top:15px">
+            </form>
+            
+            <form action="../../index.html">
+                    <input type="submit" class="button" value="HOME" style="margin-top:15px">
+                </form>
+        </h3>
+    </div>
+
+    <div class="container-fluid" style="text-align:center">
+        <h2 id="madLibsStory"><br></h2>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#madLibsForm').submit(function (event) {
+                event.preventDefault();
+
+                const noun = $('input[name="noun"]').val();
+                const adjective = $('input[name="adjective"]').val();
+                const verb = $('input[name="verb"]').val();
+                const adverb = $('input[name="adverb"]').val();
+                const noun2 = $('input[name="noun2"]').val();
+                const adjective2 = $('input[name="adjective2"]').val();
+                const pluralnoun = $('input[name="pluralnoun"]').val();
+                const pluralnoun2 = $('input[name="pluralnoun2"]').val();
+                const pluralnoun3 = $('input[name="pluralnoun3"]').val();
+                const body = $('input[name="body"]').val();
+                const noun3 = $('input[name="noun3"]').val();
+                const noun4 = $('input[name="noun4"]').val();
+                const noun5 = $('input[name="noun5"]').val();
+                const noun6 = $('input[name="noun6"]').val();
+                const body2 = $('input[name="body2"]').val();
+
+                const story = `Ye can always pretend to be a bloodthirsty <span class="underline">${noun}</span>,
+                threatening everyone by waving yer <span class="underline">${adjective}</span> sword in the air, but until ye learn to
+                <span class="underline">${verb}</span> like a pirate, ye'll never be <span class="underline">${adverb}</span>. So here's
+                some help on <span class="underline">${noun2}</span>. Don't worry, it doesn't involve <span class="underline">${adjective2}</span>
+                parrots or wearing <span class="underline">${pluralnoun}</span> on yer <span class="underline">${pluralnoun2}</span>. That's
+                just silly. <span class="underline">${pluralnoun3}</span> are OK, though. <span class="underline">${body}</span> <span
+                    class="underline">${noun3}</span>
+                are also probably OK, but <span class="underline">${noun4}</span> are right out. <span class="underline">${noun5}</span> would be
+                OK, if ye could find one. And a <span class="underline">${noun6}</span> in yer <span class="underline">${body2}</span> is the
+                mark of a lubber and will get ye tossed overboard every time.`;
+
+                $('#madLibsStory').html(story);
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>

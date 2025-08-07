@@ -1,0 +1,42 @@
+body {
+    background-image: url('images/background.jpg');
+    font-family: 'Chelsea Market', cursive;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-link {
+    cursor: pointer;
+    padding-top: 2%;
+    padding-left: 0%;
+}
+
+@media only screen and  (max-width: 4000px) and (min-width: 910px) { 
+    .desktop-hide {
+        display: none;
+    }
+}
+
+@media only screen and  (max-width: 909px) and (min-width: 100px) { 
+    .mobile-hide {
+        display: none;
+    }
+}
+
+button {
+    background: #f9e01d;
+    border-radius: 5px;
+    color: black;
+    padding: 5px 12px;
+    outline: none;
+    border: 1px solid white;
+}
+
+button:hover {
+    background: #a49a4e;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 12px;
+    outline: none;
+    border: 1px solid white;
+}

@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Junior Madlibs - Crocodile and Monkey</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8645321-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-8645321-1');
+</script>
+
+  </head>
+  <body>
+
+    <img src="images/Crocodile-and-monkey-banner.jpg" class="img-fluid" style="width: 100%;">
+    
+
+
+    <div class="container print">
+        <div class="row">
+            <div class="col-sm-12">
+              <div id="instructions">
+                <h2 class="text-center">Instructions</h2>
+                    
+                <p>To play Crocodile and monkey , click on each icon & then pick a word from the wordbank that pops up! Whatever word you pick will fill into the spot where the icon is. Each icon is shown below. The nouns & miscellaneous will have pictures instead of words. Hover over each picture for a word match. Continue doing this throughout the story until you’ve filled in all the spaces. Finally, read your story!<br><br>
+                <i class="fas fa-star"></i> Noun<br>
+                <i class="fas fa-shoe-prints"></i> Verb<br>
+                <i class="far fa-smile"></i> Adjective<br>
+                <i class="fas fa-question"></i> Miscellaneous<br><br>
+                While you don’t necessarily need to know the parts of speech to play Mad Libs Junior, here is a quick lesson: A <i class="fas fa-star"></i> NOUN is the name of a person, place, or thing. Sidewalk, umbrella, bathtub, and roller skates are nouns. An <i class="far fa-smile"></i> ADJECTIVE describes a person, place, or thing. Lumpy, soft, cute, messy, and short are adjectives. A <i class="fas fa-shoe-prints"></i> VERB is an action word. Run, jump, and swim are verbs. Last but not least, <i class="fas fa-question"></i> MISCELLANEOUS, or MISC, is any random word.</p>
+              </div>
+
+                <div class="text-center print">
+                    
+
+                  
+                  <button id="play-button">Let's Play!</button>
+                  <button id="restart">Restart</button>
+                  
+                  <form action="../../index.html">
+                    <input type="submit" class="button" value="HOME">
+                    
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="madlib">
+      <div class="row" style="margin: 0px;">
+        <!-- <div class="col-sm"></div> -->
+        <div class="col-sm-12">
+          <h3 style="line-height: 1.4;" id="print-change">
+           
+            Once upon a time, there was a monkey who lived<span class="underline" id="adj-1" data-toggle="modal" data-target="#myModal"><i class="far fa-smile"></i></span>,a tree near a <span class="underline" id="noun-1" data-toggle="modal" data-target="#myModal"><i class="fas fa-star"></i></span> One day, a crocodile came to the river and saw <span class="underline" id="verb-1" data-toggle="modal" data-target="#myModal"><i class="fas fa-shoe-prints"></i></span>monkey. The crocodile wanted to be friends with the monkey, so he asked him to come to his<span class="underline" id="verb-2" data-toggle="modal" data-target="#myModal"><i class="fas fa-shoe-prints"></i></span> for dinner. The monkey agreed and hopped<span class="underline" id="adj-2" data-toggle="modal" data-target="#myModal"><i class="far fa-smile"></i></span>the crocodile's back. But halfway through the river, the <span class="underline" id="misc-1" data-toggle="modal" data-target="#myModal"><i class="fas fa-question"></i></span>revealed his plan to eat the monkey. The clever <span class="underline" id="misc-2" data-toggle="modal" data-target="#myModal"><i class="fas fa-question"></i></span>quickly thought of a plan and told the crocodile that  <span class="underline" id="adj-3" data-toggle="modal" data-target="#myModal"><i class="far fa-smile"></i></span>had left his heart on the tree. The crocodile believed him <span class="underline" id="noun-2" data-toggle="modal" data-target="#myModal"><i class="fas fa-star"></i></span>, took the monkey back to the tree. The monkey quickly climbed up the<span class="underline" id="noun-3" data-toggle="modal" data-target="#myModal"><i class="fas fa-star"></i></span>and laughed at the foolish crocodile.
+          </h3>
+        </div>
+        <!-- <div class="col-sm"></div> -->
+      </div>
+      <div class="row" id="signature">
+        <div class="col-lg-12">
+            <p class="print">Write your name then print the game!</p>
+            <span class="text-center">Mad Libs created by: <input type="text"></span><br><br>
+            <button onclick="window.print();return false;" class="print">Print</button>
+            <audio id="backgroundMusic" loop>
+                     <source src="images/story2.mp3 " type="audio/mpeg"></audio>
+                     <script>
+  var audio = document.getElementById("backgroundMusic");
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+
+  function adjustVolume(volume) {
+    audio.volume = volume;
+  }
+</script>
+                     
+<div>
+  <button onclick="toggleAudio()">Play/pause The story</button>
+  <input type="range" id="volumeControl" min="0" max="1" step="0.1" onchange="adjustVolume(this.value)">
+</div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h4 class="modal-title">Choose <span id="title"></span>!</h4>
+            </div>
+            <div class="modal-body">
+            
+              <div class="text-center">
+                <h5 id="nouns">
+                  <span class="noun-words">monkey</span>
+                  <span class="noun-words">home</span>
+                  <span class="noun-words">on</span>
+                  <br>
+                  <span class="noun-words">cat</span>
+                  <span class="noun-words">bangalore</span>
+                  <span class="noun-words">ramesh</span>
+                  <br>
+                  <span class="noun-words">crocodile</span>
+                  <span class="noun-words">river</span>
+                  <span class="noun-words">tree </span>
+
+                </h5>
+                <h5 id="nouns2">
+                  <span class="noun-words2">monkey</span>
+                  <span class="noun-words2">hut</span>
+                  <span class="noun-words2">on</span>
+                  <br>
+                  <span class="noun-words2">this</span>
+                  <span class="noun-words2">and </span>
+                  <span class="noun-words2">he </span>
+                  <br>
+                  <span class="noun-words2">crocodile</span>
+                  <span class="noun-words2">river</span>
+                  <span class="noun-words2">tree </span>
+                </h5>
+                <h5 id="nouns3">
+                  <span class="noun-words3">monkey</span>
+                  <span class="noun-words3">home</span>
+                  <span class="noun-words3">on</span>
+                  <br>
+                  <span class="noun-words3">the</span>
+                  <span class="noun-words3">and </span>
+                  <span class="noun-words3">he </span>
+                  <br>
+                  <span class="noun-words3">crocodile</span>
+                  <span class="noun-words3">river</span>
+                  <span class="noun-words3">tree </span>
+
+                  
+                </h5>
+              </div>
+              <div class="text-center">
+                <h5 id="adjs">
+                  <span class="adj-words">monkey</span>
+                  <span class="adj-words">home</span>
+                  <span class="adj-words">on</span>
+                  <br>
+                  <span class="adj-words">the</span>
+                  <span class="adj-words">and </span>
+                  <span class="adj-words">he </span>
+                  <br>
+                  <span class="adj-words">crocodile</span>
+                  <span class="adj-words">river</span>
+                  <span class="adj-words">tree </span>
+
+                </h5>
+                <h5 id="adjs2">
+                  <span class="adj-words2">monkey</span>
+                  <span class="adj-words2">home</span>
+                  <span class="adj-words2">on</span>
+                  <br>
+                  <span class="adj-words2">the</span>
+                  <span class="adj-words2">and </span>
+                  <span class="adj-words2">he </span>
+                  <br>
+                  <span class="adj-words2">crocodile</span>
+                  <span class="adj-words2">river</span>
+                  <span class="adj-words2">tree </span>
+
+                </h5>
+                <h5 id="adjs3">
+                  <span class="adj-words3">monkey</span>
+                  <span class="adj-words3">home</span>
+                  <span class="adj-words3">on </span>
+                  <br>
+                  <span class="adj-words3">the</span>
+                  <span class="adj-words3">and</span>
+                  <span class="adj-words3">he</span>
+                  <br>
+                  <span class="adj-words3">crocodile</span>
+                  <span class="adj-words3">river</span>
+                  <span class="adj-words3">tree</span>
+                </h5>
+              </div>
+              <div class="text-center">
+                <h5 id="verbs">
+                  <span class="verb-words">monkey</span>
+                  <span class="verb-words">home</span>
+                  <span class="verb-words">on</span>
+                  <br>
+                  <span class="verb-words">the</span>
+                  <span class="verb-words">and</span>
+                  <span class="verb-words">he</span>
+                  <br>
+                  <span class="verb-words">crocodile</span>
+                  <span class="verb-words">river</span>
+                  <span class="verb-words">tree</span>
+
+                </h5>
+                <h5 id="verbs2">
+                  <span class="verb-words2">monkey</span>
+                  <span class="verb-words2">home</span>
+                  <span class="verb-words2">on</span>
+                  <br>
+                  <span class="verb-words2">the</span>
+                  <span class="verb-words2">and</span>
+                  <span class="verb-words2">he</span>
+                  <br>
+                  <span class="verb-words2">crocodile</span>
+                  <span class="verb-words2">river</span>
+                  <span class="verb-words2">tree</span>
+
+                </h5>
+              </div>
+              <div class="text-center">
+                <h5 id="misc">
+                  <span class="misc-words">monkey</span>
+                  <span class="misc-words">home</span>
+                  <span class="misc-words">singing </span>
+                  <br>
+                  <span class="misc-words">the</span>
+                  <span class="misc-words">and</span>
+                  <span class="misc-words">he</span>
+                  <br>
+                  <span class="misc-words">his</span>
+                  <span class="misc-words">crocodile</span>
+                  <span class="misc-words">ant</span>
+
+                </h5>
+                <h5 id="misc2">
+                  <span class="misc-words2">monkey</span>
+                  <span class="misc-words2">on</span>
+                  <span class="misc-words2">singing</span>
+                  <br>
+                  <span class="misc-words2">the</span>
+                  <span class="misc-words2">and</span>
+                  <span class="misc-words2">he</span>
+                  <br>
+                  <span class="misc-words2">his</span>
+                  <span class="misc-words2">crocodile</span>
+                  <span class="misc-words2">ant</span>
+                </h5>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <noscript>
+      <div class="text-center" style="background: black; color: white; padding: 40px; margin: -40% 20% 0% 20%; font-size: 25px;">
+        <p>Your browser does not not support JavaScript! Please turn it on & refresh this page.</p>
+      </div>
+    </noscript>
+  </body>
+</html>

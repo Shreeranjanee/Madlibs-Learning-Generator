@@ -1,0 +1,273 @@
+body {
+    background-image: url('images/background.jpg');
+    font-family: 'Chelsea Market', cursive;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    background: #70903b;
+    border-radius: 5px;
+    color: black;
+    padding: 3px 10px;
+    outline: none;
+    border: 1px solid white;
+}
+
+button:hover {
+    background: #505e3a;
+    border-radius: 5px;
+    color: white;
+    padding: 3px 10px;
+    outline: none;
+    border: 1px solid white;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    width: 12%;
+}
+
+#instructions {
+    font-size: 22px;
+    margin-top: 3%;
+}
+
+#instructions-button {
+    display: none;
+}
+
+#signature {
+    margin-top: 50px;
+}
+
+#play-button {
+    margin-bottom: 15px;
+}
+
+#madlib {
+    margin-top: 50px;
+    display: none;
+    text-align: center;
+}
+
+#word-selection {
+    border: 2px solid black;
+}
+
+.underline {
+    border-bottom: 2px solid black;
+    padding: 0px 46px;
+    cursor: pointer;
+}
+
+.no-underline {
+    padding: 0px 46px;
+    cursor: pointer;
+}
+
+.selectWord {
+    cursor: pointer;
+}
+
+.adj-words {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words2 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.adj-words3 {
+    padding: 0px 15px; 
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+.verb-words {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+}
+
+/* .misc-words {
+    padding: 0px 15px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    line-height: 3;
+} */
+
+@media only screen and  (max-width: 4000px) and (min-width: 910px) { 
+    /* .noun-images {
+        width: 17%;
+        margin-top: -25px;
+    } */
+
+    .noun-words img {
+        width: 16%;
+    }
+
+    #noun-1 img {
+        width: 6%;
+    }
+
+    /* .noun-images2 {
+        width: 17%;
+        margin-top: -25px;
+    } */
+
+    .noun-words2 img {
+        width: 16%;
+    }
+
+    #noun-2 img {
+        width: 6%;
+    }
+
+    .noun-words {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .noun-words2 {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+
+    .misc-words img {
+        width: 16%;
+    }
+
+    #misc-1 img {
+        width: 6%;
+    }
+
+    .misc-words {
+        padding: 0px 35px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 4;
+    }
+}
+
+@media only screen and  (max-width: 909px) and (min-width: 100px) { 
+    /* .noun-images {
+        width: 20%;
+    } */
+
+    .noun-words img {
+        width: 20%;
+    }
+
+    #noun-1 img {
+        width: 20%;
+    }
+
+    /* .noun-images2 {
+        width: 20%;
+    } */
+
+    .noun-words2 img {
+        width: 20%;
+    }
+
+    #noun-2 img {
+        width: 20%;
+    }
+
+    .noun-words {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .noun-words2 {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    .misc-words img {
+        width: 20%;
+    }
+
+    #misc-1 img {
+        width: 20%;
+    }
+
+    .misc-words {
+        padding: 0px 15px; 
+        margin-bottom: 50px;
+        cursor: pointer;
+        line-height: 3;
+    }
+}
+
+@media print {
+
+    .noun-words img {
+        width: 16%;
+    }
+
+    #noun-1 img {
+        width: 6%;
+    }
+
+    .noun-words2 img {
+        width: 16%;
+    }
+
+    #noun-2 img {
+        width: 6%;
+    }
+
+    .misc-words img {
+        width: 16%;
+    }
+
+    #misc-1 img {
+        width: 6%;
+    }
+
+    .print {
+        display: none;
+    }
+
+    #signature {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    input {
+        width: 40%;
+        border: none;
+        font-weight: bold;
+    }
+
+    #print-change {
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+
+    #madlib {
+        text-align: left;
+    }
+}

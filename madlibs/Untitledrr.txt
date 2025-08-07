@@ -1,0 +1,28 @@
+
+
+    <script>
+        document.getElementById("madLibsForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            const values = {};
+            for (let [name, value] of formData.entries()) {
+                values[name] = value;
+            }
+
+            generateMadLibs(values);
+        });
+
+        function generateMadLibs(values) {
+            const story = `Once upon a time, there was a ${values.adjective} ${values.noun} named ${values.personf}. This cat was known for its ${values.adjective2} ${values.body} and its ability to ${values.verb} ${values.adverb} around the ${values.place}. 
+            One day, ${values.number} ${values.pluralnoun} ${values.noun2} showed up at ${values.person}'s house and started ${values.verb2} all the ${values.food}. ${values.personf2} was surprised and quickly called for help. Soon, a group of ${values.pluralnoun2} arrived and tried to catch the mischievous ${values.animal}.
+
+            The chase went on for hours, with the ${values.animal} darting in and out of ${values.place}, knocking over ${values.noun2} and causing chaos. But in the end, the cat's quick thinking and ${values.adverb2} actions saved the day. The ${values.animal} was caught and returned to its rightful place, and ${values.personf} became a hero in the eyes of the ${values.pluralnoun}.
+
+            And so, the tale of the ${values.adjective} ${values.noun} and its daring adventure became a legend in the town of ${values.place}. The end.`;
+
+            document.getElementById("storyContainer").style.display = "block";
+            document.getElementById("madLibsStory").textContent = story;
+        }
+    </script>

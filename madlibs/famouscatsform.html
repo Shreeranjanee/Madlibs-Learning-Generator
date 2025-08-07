@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad Libs - Famous Cats</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    .button {
+      background: #d94697;
+      border-radius: 5px;
+      color: black;
+      padding: 3px 10px;
+      outline: none;
+      border: 1px solid white;
+      font-size: 25px;
+    }
+
+    .button:hover {
+      background: #ef8bc2;
+      border-radius: 5px;
+      color: white;
+      padding: 3px 10px;
+      outline: none;
+      border: 1px solid white;
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="images/famouscats.jpg" class="img-fluid" style="width: 100%;">
+
+  <div class="container-fluid" style="padding-top: 20px">
+    <h3 style="text-align:center">
+      To play, fill in the blanks on this page with the requested words. When you’re done, click “Create Mad Libs” to view your story. Read the story aloud and laugh! In case you haven’t learned the parts of speech yet, here is a quick lesson:
+    </h3><br>
+    <ul>
+      <h3><li>A <span class="wordsred">NOUN</span> is the name of a person, place, or thing. Sidewalk, umbrella, bathtub, and roller skates are nouns.</li></h3>
+      <h3><li>An <span class="wordspurple">ADJECTIVE</span> describes a person, place, or thing. Lumpy, soft, cute, messy, and short are adjectives.</li></h3>
+      <h3><li>A <span class="wordsblue">VERB</span> is an action word. Run, jump, and swim are verbs.</li></h3>
+      <h3><li>An <span class="wordsgreen">ADVERB</span> describes in what way someone does something. Quickly, slowly, and carefully are adverbs.</li></h3>
+    </ul>
+  </div>
+  
+  <div class="container-fluid" style="text-align:center">
+    <h3>
+        <form id="madLibsForm" action="images/internet.html" method="POST" onsubmit="handleFormSubmit(event)">
+        <table>
+          <tr>
+            <td><input type="text" name="adjective" placeholder="adjective" autocomplete="off" required></td>
+            <td><input type="text" name="noun" placeholder="noun" autocomplete="off" required></td>
+            <td><input type="text" name="number" placeholder="number" autocomplete="off" required></td>
+            <td><input type="text" name="food" placeholder="types of food" autocomplete="off" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="pluralnoun" placeholder="plural noun" autocomplete="off" required></td>
+            <td><input type="text" name="verb" placeholder="verb" autocomplete="off" required></td>
+            <td><input type="text" name="person" placeholder="person in room" autocomplete="off" required></td>
+            <td><input type="text" name="personf" placeholder="female in room" autocomplete="off" required></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="pluralnoun2" placeholder="plural noun" autocomplete="off" required></td>
+            <td><input type="text" name="noun2" placeholder="noun" autocomplete="off" required></td>
+            <td><input type="text" name="body" placeholder="part of the body" autocomplete="off" required></td>
+            <td><input type="text" name="place" placeholder="town" autocomplete="off" required></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="text" name="personf2" placeholder="female in room" autocomplete="off" required></td>
+            <td><input type="text" name="adjective2" placeholder="adjective" autocomplete="off" required></td>
+            <td><input type="text" name="animal" placeholder="animal" autocomplete="off" required></td>
+            <td></td>
+          </tr>
+        </table>
+        <br>
+        <input type="submit" class="button" value="Create Mad Libs!" style="margin-top:15px">
+      </form>
+      
+      
+      <form action="../../index.html">
+                    <input type="submit" class="button" value="HOME" style="margin-top:15px">
+                </form>
+    </h3>
+  </div>
+
+  <script>
+    // Handle form submission
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      const values = {};
+      for (let [name, value] of formData.entries()) {
+        values[name] = value;
+      }
+
+      printFormInputValues(values);
+      generateMadLibs(values);
+    }
+
+    // Function to generate the Mad Libs story
+    function generateMadLibs(values) {
+      const story = `Once upon a time, there was a ${values.adjective} ${values.noun} named ${values.personf}. This cat was known for its ${values.adjective2} ${values.body} and its ability to ${values.verb} ${values.adverb} around the ${values.place}. 
+      One day, ${values.number} ${values.pluralnoun} ${values.noun2} showed up at ${values.person}'s house and started ${values.verb2} all the ${values.food}. ${values.personf2} was surprised and quickly called for help. Soon, a group of ${values.pluralnoun2} arrived and tried to catch the mischievous ${values.animal}.
+
+      The chase went on for hours, with the ${values.animal} darting in and out of ${values.place}, knocking over ${values.noun2} and causing chaos. But in the end, the cat's quick thinking and ${values.adverb2} actions saved the day. The ${values.animal} was caught and returned to its rightful place, and ${values.personf} became a hero in the eyes of the ${values.pluralnoun}.
+
+      And so, the tale of the ${values.adjective} ${values.noun} and its daring adventure became a legend in the town of ${values.place}. The end.`;
+
+      // Display the generated story
+      const storyContainer = document.createElement('div');
+      storyContainer.classList.add('container-fluid');
+      storyContainer.style.paddingTop = '20px';
+      storyContainer.innerHTML = `<h3>${story}</h3>`;
+      document.body.appendChild(storyContainer);
+    }
+
+    // Function to print form input values (for testing)
+    function printFormInputValues(values) {
+      console.log(values);
+    }
+    
+  </script>
+  <script>
+    // Handle form submission
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      const values = {};
+      for (let [name, value] of formData.entries()) {
+        values[name] = value;
+      }
+  
+      generateMadLibs(values);
+    }
+  
+    // Function to generate the Mad Libs story
+    function generateMadLibs(values) {
+      const story = `Once upon a time, there was a ${values.adjective} ${values.noun} named ${values.personf}. This cat was known for its ${values.adjective2} ${values.body} and its ability to ${values.verb} ${values.adverb} around the ${values.place}. 
+      One day, ${values.number} ${values.pluralnoun} ${values.noun2} showed up at ${values.person}'s house and started ${values.verb2} all the ${values.food}. ${values.personf2} was surprised and quickly called for help. Soon, a group of ${values.pluralnoun2} arrived and tried to catch the mischievous ${values.animal}.
+  
+      The chase went on for hours, with the ${values.animal} darting in and out of ${values.place}, knocking over ${values.noun2} and causing chaos. But in the end, the cat's quick thinking and ${values.adverb2} actions saved the day. The ${values.animal} was caught and returned to its rightful place, and ${values.personf} became a hero in the eyes of the ${values.pluralnoun}.
+  
+      And so, the tale of the ${values.adjective} ${values.noun} and its daring adventure became a legend in the town of ${values.place}. The end.`;
+  
+      // Hide all elements
+      document.body.innerHTML = '';
+  
+      // Create container for image and story
+      const container = document.createElement('div');
+      container.classList.add('container-fluid');
+      container.style.paddingTop = '20px';
+  
+      // Add the image
+      const image = document.createElement('img');
+      image.src = 'images/famouscats.jpg';
+      image.classList.add('img-fluid');
+      image.style.width = '100%';
+      container.appendChild(image);
+  
+      // Add the story
+      const storyContainer = document.createElement('div');
+      storyContainer.innerHTML = `<h3>${story}</h3>`;
+      container.appendChild(storyContainer);
+  
+      // Append the container to the body
+      document.body.appendChild(container);
+    }
+  </script>
+  
+  
+</body>
+</html>
